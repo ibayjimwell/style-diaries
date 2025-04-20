@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+}
+
+.svg-bg {
+    background-image: url('../svg/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.primary {
+    background-color: #1f2937;
+    color: #f9fafb;
+    cursor: pointer;
+}
+.primary:hover {
+    background-color: #111827;
+}
+
+.secondary {
+    background-color: #e5e7eb;
+    color: #030712;
+    cursor: pointer;
+}
+.secondary:hover {
+    background-color: #d1d5db;
+}
+
+

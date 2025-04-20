@@ -1,0 +1,38 @@
+<%- include('partials/authTop') %>
+    <form class="card" method="post">
+        <h2 class="card-title">Signup</h2>
+        <div class="card-inputs">
+
+            <!-- Fullname Input with Icon -->
+            <div class="input-wrapper">
+                <i class="fas fa-user input-icon"></i>
+                <input type="text" class="card-input" name="fullname" id="fullname" placeholder="Fullname" required>
+            </div>
+
+            <!-- Username Input with Icon -->
+            <div class="input-wrapper">
+                <i class="fas fa-user input-icon"></i>
+                <input type="text" class="card-input" name="username" id="username" placeholder="Username" required>
+            </div>
+
+            <!-- Password Input with Icon and Eye -->
+            <div class="input-wrapper">
+                <i class="fas fa-lock input-icon"></i>
+                <input type="password" class="card-input" name="password" id="password" placeholder="Password" required>
+                <i class="fas fa-eye-slash input-icon-right" id="passwordEyeIcon"></i>
+            </div>
+
+            <!-- Confirm Password Input with Icon and Eye -->
+            <div class="input-wrapper">
+                <i class="fas fa-lock input-icon"></i>
+                <input type="password" class="card-input" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+                <i class="fas fa-eye-slash input-icon-right" id="confirmPasswordEyeIcon"></i>
+            </div>
+        </div>
+        <div class="card-buttons">
+            <input type="submit" class="card-button primary" value="Create">
+            <div class="divider"><span>or</span></div>
+            <input type="button" class="card-button secondary" value="Login" onclick="window.location.href='/login'">
+        </div>
+    </form>
+<%- include('partials/authBottom') %>

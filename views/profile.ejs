@@ -1,0 +1,26 @@
+<%- include('partials/appTop') %>
+    <%- include('partials/header') %>
+    <%- include('partials/appNavbar', {title: 'My Account'}) %>
+
+    <div class="container">
+        <aside class="sidebar">
+          <button class="nav-button active"><i class="fas fa-user"></i> My Details</button>
+          <button class="nav-button"><i class="fas fa-sign-out-alt"></i> Sign out</button>
+        </aside>
+      
+        <main class="profile-content">
+          <div class="profile-card">
+            <h2>Profile Details</h2>
+            <h4>Personal Information</h4>
+            <hr>
+            <div class="profile-info">
+              <p><strong>Full name:</strong> Juan Dela Cruz</p>
+              <p><strong>Username:</strong> Juandl</p>
+              <p><strong>Email Address:</strong> Juandelacruz@gmail.com</p>
+              <p><strong>Change Password:</strong> juanjuan1010</p>
+            </div>
+          </div>
+        </main>
+    </div>
+
+<%- include('partials/appBottom') %>

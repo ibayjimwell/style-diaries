@@ -1,0 +1,16 @@
+{
+  "name": "style-diaries",
+  "version": "1.0.0",
+  "description": "We’re all about helping you look and feel your best with trendy, affordable, and timeless fashion.",
+  "license": "ISC",
+  "author": "Jimwell Ibay",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

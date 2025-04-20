@@ -1,0 +1,103 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* Add padding for smaller screens */
+}
+
+.card {
+    background-color: #f9fafb;
+    border: 0.5px solid #6b7280;
+    padding: 35px;
+    width: 100%; /* Make card responsive */
+    max-width: 500px; /* Limit max width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+.card-title {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center; /* Center title for better alignment */
+}
+
+.card-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.card-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-input {
+    width: 100%; /* Make input fields responsive */
+    padding: 10px;
+    border: 0.5px solid #6b7280;
+    border-radius: 20px;
+    font-size: medium;
+    outline: none;
+}
+
+.forgot-pass {
+    text-align: right;
+    font-size: medium;
+    text-decoration: none;
+    color: #2563eb;
+    margin-right: 6px;
+}
+
+.card-button {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #9ca3af;
+    margin: 4px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #9ca3af;
+    margin: 0 10px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    color: #111827;
+    font-size: 16px;
+}
+
+.input-icon-right {
+    position: absolute;
+    right: 15px;
+    color: #111827;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input-wrapper .card-input {
+    padding-left: 40px;
+    padding-right: 40px;
+}

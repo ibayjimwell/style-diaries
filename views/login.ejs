@@ -1,0 +1,26 @@
+<%- include('partials/authTop') %>
+    <form class="card" method="post">
+        <h2 class="card-title">Login</h2>
+        <div class="card-inputs">
+            <!-- Username Input with Icon -->
+            <div class="input-wrapper">
+                <i class="fas fa-user input-icon"></i>
+                <input type="text" class="card-input" name="username" id="username" placeholder="Username" required>
+            </div>
+
+            <!-- Password Input with Icon and Eye -->
+            <div class="input-wrapper">
+                <i class="fas fa-lock input-icon"></i>
+                <input type="password" class="card-input" name="password" id="password" placeholder="Password" required>
+                <i class="fas fa-eye-slash input-icon-right" id="passwordEyeIcon"></i>
+            </div>
+
+            <a href="" class="forgot-pass">Forgot password</a>
+        </div>
+        <div class="card-buttons">
+            <input type="submit" class="card-button primary" value="Login">
+            <div class="divider"><span>or</span></div>
+            <input type="button" class="card-button secondary" value="Signup" onclick="window.location.href='/signup'">
+        </div>
+    </form>
+<%- include('partials/authBottom') %>
