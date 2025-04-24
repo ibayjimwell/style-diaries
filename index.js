@@ -37,6 +37,15 @@ app.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+// Fashions route
+app.get('/fashions', (req, res) => {
+    if (!User) {
+        res.redirect('/login'); // Redirect to login page if user is not logged in
+    } else {
+        res.render('fashions');
+    }
+});
+
 // User profile route
 app.get('/user/profile', (req, res) => {
     if (!User) {
@@ -46,24 +55,21 @@ app.get('/user/profile', (req, res) => {
     }
 });
 
-// Shop route
-app.get('/shop', (req, res) => {
-    res.redirect('/shop/all')
-});
-app.get('/shop/all', (req, res) => {
-    if (!User) {
-        res.redirect('/login'); // Redirect to login page if user is not logged in
-    } else {
-        res.render('shop');
-    }
-});
-
 // Cart route
-app.get('/shop/cart', (req, res) => {
+app.get('/shop/Cart', (req, res) => {
     if (!User) {
         res.redirect('/login'); // Redirect to login page if user is not logged in
     } else {
         res.render('cart');
+    }
+});
+
+// Shop route
+app.get('/shop/:category', (req, res) => {
+    if (!User) {
+        res.redirect('/login'); // Redirect to login page if user is not logged in
+    } else {
+        res.render('shop', { category: req.params.category });
     }
 });
 

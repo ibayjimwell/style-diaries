@@ -1,0 +1,118 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 35px;
+    background-color: #ffffff;
+    border: 0.5px solid #6b7280;
+    width: 100%;
+    position: fixed;
+    top: 68px;
+    left: 0;
+}
+
+.navbar-item {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    list-style: none;
+    cursor: pointer;
+}
+
+.navbar-item:hover {
+    border-bottom: 4px solid #1f2937;
+    transition: 0.1s;
+}
+
+.shop-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.shop-card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.shop-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.shop-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* Hover effects */
+.shop-card:hover::after {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.shop-card:hover .overlay-text {
+    opacity: 1;
+}
+
+.fashion-container {
+    width: 100%;
+    max-width: 1300px; 
+    margin: 0 auto;    
+    padding: 0 10px;
+}
+
+.fashion-cards {
+    column-count: auto;         /* You can set this if you want a specific number of columns */
+    column-width: 200px;        /* This ensures each column is ~200px wide */
+    column-gap: 10px;           /* Spacing between columns */
+}
+
+.fashion-cards img {
+    width: 100%;                /* Takes up the full column width */
+    height: auto;               /* Keeps natural height */
+    border-radius: 10px;
+    margin-bottom: 10px;        /* Gap between images vertically */
+    display: block;             /* Prevent inline spacing issues */
+}
+
+.see-more-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.see-more-button {
+    padding: 10px;
+    border: 0.5px solid #6b7280;
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    width: 250px;
+}

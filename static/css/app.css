@@ -2,9 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px;
+    padding: 15px;
     background-color: #ffffff;
     border: 0.5px solid #6b7280;
+    width: 100%;
+    position: fixed;
+    top: 68px;
+    left: 0;
+    z-index: 1000;
 }
 
 .container {
@@ -14,11 +19,15 @@
   
 .sidebar {
     width: 220px;
-    height: 100vh;
+    height: 86.5%;
     background-color: #ffffff;
     border-right: 0.5px solid #6b7280;
+    border-bottom: 0.5px solid #6b7280;
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 129px;
+    left: 0;
 }
 
 .nav-button {
