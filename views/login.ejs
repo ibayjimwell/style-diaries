@@ -14,7 +14,9 @@
                 <input type="password" class="card-input" name="password" id="password" placeholder="Password" required>
                 <i class="fas fa-eye-slash input-icon-right" id="passwordEyeIcon"></i>
             </div>
-
+            <% if (error) { %>
+                <p style="color: red; font-size: small; margin-left: 15px;"><%= error %></p>
+            <% } %>
             <a href="" class="forgot-pass">Forgot password</a>
         </div>
         <div class="card-buttons">

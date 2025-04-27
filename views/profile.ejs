@@ -2,22 +2,22 @@
     <%- include('partials/header') %>
     <%- include('partials/appNavbar', {title: 'My Account'}) %>
 
-    <div class="container">
+    <div class="container" >
         <aside class="sidebar">
           <button class="nav-button active"><i class="fas fa-user"></i> My Details</button>
-          <button class="nav-button"><i class="fas fa-sign-out-alt"></i> Sign out</button>
+          <button type="submit" class="nav-button" form="signout_form"><i class="fas fa-sign-out-alt"></i> Sign out</button>
+          <form action="/signout" method="post" id="signout_form" style="display: none;">
+          </form>
         </aside>
       
-        <main class="profile-content">
+        <main class="profile-content" style="margin-top: 125px;">
           <div class="profile-card">
             <h2>Profile Details</h2>
             <h4>Personal Information</h4>
             <hr>
             <div class="profile-info">
-              <p><strong>Full name:</strong> Juan Dela Cruz</p>
-              <p><strong>Username:</strong> Juandl</p>
-              <p><strong>Email Address:</strong> Juandelacruz@gmail.com</p>
-              <p><strong>Change Password:</strong> juanjuan1010</p>
+              <p><strong>Full name:</strong><%= user.fullname %></p>
+              <p><strong>Username:</strong><%= user.username %></p>
             </div>
           </div>
         </main>

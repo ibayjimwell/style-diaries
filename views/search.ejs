@@ -1,0 +1,30 @@
+<%- include('partials/appTop') %>
+    <%- include('partials/header') %>
+
+    <div class="cart-page">
+        <div class="cart-items" style="margin-top: 80px;">
+            <% products.forEach((item) => { %>
+                <div class="cart-item" id="<%= item.id %>">
+                    <img src="<%= item.image_url %>" alt="Item <%= item.id %>">
+                    <div class="cart-details">
+                        <h3><%= item.name %></h3>
+                        <p><%= item.description %></p>
+                        <span class="price">$<%= item.price %></span>
+                    </div>
+                    <div class="cart-right">
+                        <span class="tag"><%= item.category %></span>
+                        <form action="/add/to/cart/<%= user.id %>/search/<%= item.id %>" method="post">
+                            <input type="submit" class="remove-btn primary" value="Add to Cart">
+                        </form>
+                    </div>
+                </div>
+            <% }) %>
+            <% if (products.length === 0) { %>
+                <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
+                    <h3 style="color: #6b7280; font-size: large; font-weight: bold;">No results found.</h3>
+                </div>
+            <%} %>    
+        </div>
+    </div>
+
+<%- include('partials/appBottom') %>

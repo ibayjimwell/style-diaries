@@ -2,22 +2,15 @@
     <%- include ('partials/header') %>
     <%- include ('partials/indexNavbar') %>
 
+    <div style="padding: 50px;"></div>
+
     <!-- Fashion -->
     <section id="fashion" class="fashion-container">
       <h2 style="text-align: center; font-size: xx-large; margin-bottom: 30px; margin-top: 40px;">Fashions</h2>
       <div class="fashion-cards">
-          <img src="https://i.pinimg.com/736x/7d/7e/09/7d7e09e8989615af38369e59a13b63a5.jpg" alt="Coquette">
-          <img src="https://i.pinimg.com/736x/7d/7e/09/7d7e09e8989615af38369e59a13b63a5.jpg" alt="Coquette">
-          <img src="https://i.pinimg.com/236x/85/d7/5c/85d75c3dde0c013602f868407dd38754.jpg" alt="Formal">
-          <img src="https://images.pexels.com/photos/29849761/pexels-photo-29849761/free-photo-of-urban-fashion-couple-posing-outdoors.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Streetwear">
-          <img src="https://media.femalemag.com.sg/source/2016/06/KL_07-750x1124.jpg" alt="Glamorous">
-          <img src="https://i.pinimg.com/236x/85/d7/5c/85d75c3dde0c013602f868407dd38754.jpg" alt="Formal">
-          <img src="https://images.pexels.com/photos/29849761/pexels-photo-29849761/free-photo-of-urban-fashion-couple-posing-outdoors.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Streetwear">
-          <img src="https://media.femalemag.com.sg/source/2016/06/KL_07-750x1124.jpg" alt="Glamorous">
-          <img src="https://i.pinimg.com/236x/85/d7/5c/85d75c3dde0c013602f868407dd38754.jpg" alt="Formal">
-          <img src="https://images.pexels.com/photos/29849761/pexels-photo-29849761/free-photo-of-urban-fashion-couple-posing-outdoors.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Streetwear">
-          <img src="https://media.femalemag.com.sg/source/2016/06/KL_07-750x1124.jpg" alt="Glamorous">
-          <img src="https://i.pinimg.com/236x/85/d7/5c/85d75c3dde0c013602f868407dd38754.jpg" alt="Formal">
+          <% fashions.forEach((fashion) => { %>
+              <img src="<%= fashion.image_url %>" alt="Fashion Image" key="<%= fashion.id %>">
+          <% }) %>
       </div>
       <form action="/fashions" class="see-more-form">
         <input type="submit" value="See More..." class="see-more-button">
@@ -46,5 +39,7 @@
           </div>
         </div>
     </section>
+
+    <div style="padding: 50px;"></div>
 
 <%- include ('partials/indexBottom') %>

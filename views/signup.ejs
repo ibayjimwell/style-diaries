@@ -28,6 +28,9 @@
                 <input type="password" class="card-input" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
                 <i class="fas fa-eye-slash input-icon-right" id="confirmPasswordEyeIcon"></i>
             </div>
+            <% if (error) { %>
+                <p style="color: red; font-size: small; margin-left: 15px;"><%= error %></p>
+            <% } %>
         </div>
         <div class="card-buttons">
             <input type="submit" class="card-button primary" value="Create">
