@@ -102,6 +102,16 @@ class Database {
         }
     }
 
+    // Method to count card items
+    async getCartCount(userId) {
+        try {
+            const result = await this.pool.query('SELECT COUNT(*) AS total_items FROM style_diaries_cart WHERE user_id = $1', [userId]);
+            return result.rows[0]; // Return the cart items for the specified user
+        } catch (error) {
+            console.error('Error in getCartItems:', error);
+        }
+    }
+
     // Method to remove from cart
     async removeFromCart(cartId) {
         try {

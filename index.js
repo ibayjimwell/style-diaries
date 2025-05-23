@@ -14,9 +14,15 @@ let User = null;
 let Search = null;
 
 // Middlewares
-app.use((req, res, next) => {
+app.use( async (req, res, next) => {
     res.locals.currentPath = req.path; // make available in all EJS files
+
+    if (User) {
+        res.locals.cartCount = await db.getCartCount(User.id); // Get the cart count for the logged-in user
+    }
+
     next();
+    
 });
 // For JSON requests
 app.use(express.json());

@@ -1,5 +1,5 @@
 <aside class="sidebar">
-    <button class="nav-button <%= currentPath === '/shop/Cart' ? 'active' : '' %>" onclick="window.location.href='/shop/Cart'"><i class="fa fa-shopping-cart"></i> <span class="cart-quantity">6</span><span class="cart-text">Cart</span></button>
+    <button class="nav-button <%= currentPath === '/shop/Cart' ? 'active' : '' %>" onclick="window.location.href='/shop/Cart'"><i class="fa fa-shopping-cart"></i><span class="cart-quantity"><%= cartCount.total_items %></span><span class="cart-text">Cart</span></button>
     <button class="nav-button <%= currentPath === '/shop/Formal' ? 'active' : '' %>" onclick="window.location.href='/shop/Formal'"><i class="fas fa-tags"></i>Formal</button>
     <button class="nav-button <%= currentPath === '/shop/Streetwear' ? 'active' : '' %>" onclick="window.location.href='/shop/Streetwear'"><i class="fas fa-tags"></i>Streetwear</button>
     <button class="nav-button <%= currentPath === '/shop/Glamorous' ? 'active' : '' %>" onclick="window.location.href='/shop/Glamorous'"><i class="fas fa-tags"></i>Glamorous</button>
