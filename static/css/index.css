@@ -116,3 +116,156 @@
     cursor: pointer;
     width: 250px;
 }
+
+.shared-bg {
+  background: url('../image/background.jpg') no-repeat center center/cover;
+  padding: 0;
+  position: relative;
+   z-index: 0;
+}
+
+.shared-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* adjust opacity here */
+  z-index: 1;
+}
+
+.hero-section,
+.style-meets {
+  position: relative;
+  z-index: 2; /* ensure text is above overlay */
+}
+
+
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 5%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text h1 {
+  font-size: 7rem;
+  font-family: 'Brush Script MT', cursive;
+  line-height: 1.1;
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-info {
+  max-width: 500px;
+  color: #fff;
+}
+
+.hero-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero-info p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.style-meets {
+  padding: 60px 10%;
+  text-align: center;
+  color: white;
+}
+
+.style-meets h2 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.style-meets p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.contact-section {
+  background-color: #111;
+  padding: 50px 10%;
+  text-align: center;
+  color: white;
+}
+
+.contact-section h2 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+.copyright {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+
+  .hero-info {
+    margin-top: 30px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: 0.3s ease;
+}

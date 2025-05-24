@@ -2,10 +2,34 @@
     <%- include ('partials/header') %>
     <%- include ('partials/indexNavbar') %>
 
+  <div class="shared-bg">
+
     <div style="padding: 50px;"></div>
 
+    <section class="hero-section" id="home">
+      <div class="hero-text">
+        <h1>The<br>Style<br>Diaries</h1>
+      </div>
+      <div class="hero-info">
+        <h2>Fashion Collection</h2>
+        <p>This collection is a reflection of bold individuality and modern elegance, blending timeless silhouettes with contemporary details. Inspired by Lifestyle & Pop Culture, each piece tells a story of confidence, creativity, and style.</p>
+        <p>Let me know your collection’s theme or vibe (Formal, Streetwear, Glamorous, Coquette etc.), and I can make it more specific and unique to you!</p>
+        <a href="#fashion" class="cta-btn">Get Started</a>
+      </div>
+    </section>
+
+    <section class="style-meets" id="about">
+      <h2>Where Style Meets You!</h2>
+      <p>We’re all about helping you look and feel your best with trendy, affordable, and timeless fashion. From everyday essentials to standout statement pieces, our shop offers styles for every mood and moment.</p>
+      <p>We want this corner of the internet to feel safe and non-judgmental. We want to be a resource, not a textbook. We want our site to be filled with approachable ideas, good conversations, and entertaining articles supported by well styled, and well shot photos that empower you to make your own home reflect YOU.</p>
+      <p>The only thing we love more than design and style is our avidly engaged audience. And we’re honored that you’re spending your time here with us.</p>
+    </section>
+  </div>
+
+  <div style="padding: 50px;"></div>
+
     <!-- Fashion -->
-    <section id="fashion" class="fashion-container">
+    <section id="fashion" class="fashion-container" id="fashion">
       <h2 style="text-align: center; font-size: xx-large; margin-bottom: 30px; margin-top: 40px;">Fashions</h2>
       <div class="fashion-cards">
           <% fashions.forEach((fashion) => { %>
@@ -41,5 +65,15 @@
     </section>
 
     <div style="padding: 50px;"></div>
+
+  <section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><i class="fa fa-phone"></i> 1821-173-769</p>
+      <p><i class="fa fa-envelope"></i> thestylediaries@gmail.com</p>
+      <p><i class="fa fa-facebook"></i> Style Diaries Official</p>
+    </div>
+    <p class="copyright">Copyright© 2025, the style diaries</p>
+  </section>
 
 <%- include ('partials/indexBottom') %>
