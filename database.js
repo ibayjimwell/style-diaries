@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt'); // For password hashing
 // Database class It's a responsible to manipulate the database connection and queries
 class Database {
     constructor() {
+        // Create a new pool connection using environment variables
         this.pool = new Pool({
             user: process.env.USER,
             host: process.env.HOST,
@@ -13,7 +14,60 @@ class Database {
             password: process.env.PASSWORD,
             port: process.env.PORT,
         });
+
+        this.initTables() // Initialize tables when the class is instantiated
+
     }
+
+    // Method to initialize tables if they do not exist
+    async initTables() {
+        try {
+            // Users table
+            await this.pool.query(`
+                CREATE TABLE IF NOT EXISTS style_diaries_users (
+                    id SERIAL PRIMARY KEY,
+                    username VARCHAR(255) UNIQUE NOT NULL,
+                    password VARCHAR(255) NOT NULL,
+                    fullname VARCHAR(255) NOT NULL
+                );
+            `);
+
+            // Fashions table
+            await this.pool.query(`
+                CREATE TABLE IF NOT EXISTS style_diaries_fashions (
+                    id SERIAL PRIMARY KEY,
+                    name VARCHAR(255) NOT NULL,
+                    description TEXT,
+                    image_url TEXT
+                );
+            `);
+
+            // Products table
+            await this.pool.query(`
+                CREATE TABLE IF NOT EXISTS style_diaries_products (
+                    id SERIAL PRIMARY KEY,
+                    name VARCHAR(255) NOT NULL,
+                    category VARCHAR(255) NOT NULL,
+                    price NUMERIC(10,2) NOT NULL,
+                    image_url TEXT
+                );
+            `);
+
+            // Cart table
+            await this.pool.query(`
+                CREATE TABLE IF NOT EXISTS style_diaries_cart (
+                    id SERIAL PRIMARY KEY,
+                    user_id INTEGER REFERENCES style_diaries_users(id) ON DELETE CASCADE,
+                    product_id INTEGER REFERENCES style_diaries_products(id) ON DELETE CASCADE
+                );
+            `);
+
+            console.log('All tables are initialized.');
+        } catch (error) {
+            console.error('Error initializing tables:', error);
+        }
+    }
+
 
     // Method to get the fashions ramdomly
     async getFashions(limit = null) {
